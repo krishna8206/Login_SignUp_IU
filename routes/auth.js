@@ -46,6 +46,7 @@ router.post('/google-login', async (req, res) => {
       expiresIn: '7d',
     });
 
+    
     return res.json({
       token,
       user,
