@@ -134,9 +134,9 @@ exports.sendOTP = async (req, res) => {
       licenseNumber: role === 'Driver' ? licenseNumber : '', // This might be overridden by DigiLocker
       otp,
       verified: false,
-      digilockerVerified: false, // Initialize DigiLocker verification status
-      aadhaarNumber: null, // Reset or initialize
-      drivingLicenseNumber: null, // Reset or initialize
+      // digilockerVerified: false, // Initialize DigiLocker verification status
+      // aadhaarNumber: null, // Reset or initialize
+      // drivingLicenseNumber: null, // Reset or initialize
     };
 
     const user = await User.findOneAndUpdate({ email }, update, { upsert: true, new: true });
